@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Collation Anti-Craquage | Fonseca Online Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--y:#FFD600;--k:#10100E;--k2:#1B1B18;--k3:#26261F;--w:#F6F5EF;--g:#A9A89E;--line:#34342B}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--k);color:var(--w);font-family:'DM Sans',Arial,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.bebas{font-family:'Bebas Neue',Arial,sans-serif;font-weight:400;letter-spacing:.5px;line-height:1}
+.y{color:var(--y)}
+
+/* HERO */
+.hero{padding:28px 20px 36px;position:relative;overflow:hidden}
+.hero:after{content:"16H30";position:absolute;right:-20px;bottom:-30px;font-family:'Bebas Neue';font-size:220px;color:var(--k2);z-index:0;pointer-events:none;line-height:1}
+.hero>*{position:relative;z-index:1}
+.logo{display:flex;align-items:center;gap:12px;margin-bottom:34px}
+.logo img{height:46px;width:auto}
+.logo .mark{width:44px;height:44px;background:var(--y);color:var(--k);display:grid;place-items:center;font-family:'Bebas Neue';font-size:32px;border-radius:8px}
+.logo .name{font-family:'Bebas Neue';font-size:20px;line-height:1;letter-spacing:1px}
+.logo .name small{display:block;color:var(--g);font-family:'DM Sans';font-size:11px;letter-spacing:2px;margin-top:3px}
+.tag{display:inline-block;background:var(--y);color:var(--k);font-weight:700;font-size:12px;letter-spacing:2px;padding:6px 12px;border-radius:4px;margin-bottom:16px}
+.hero h1{font-size:clamp(56px,14vw,96px)}
+.hero p.lead{font-size:18px;color:#DCDBD2;margin-top:16px;max-width:520px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;color:#DCDBD2}
+
+/* WEIGHT PICKER */
+.picker{position:sticky;top:0;z-index:20;background:rgba(16,16,14,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0}
+.picker .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.picker label{font-size:13px;color:var(--g);font-weight:500;white-space:nowrap}
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{font-family:'DM Sans';font-weight:700;font-size:14px;background:var(--k2);color:var(--w);border:1px solid var(--line);border-radius:8px;padding:8px 11px;cursor:pointer;transition:.15s}
+.seg button.on{background:var(--y);color:var(--k);border-color:var(--y)}
+.picker .goal{margin-left:auto;font-size:13px;color:var(--g)}
+.picker .goal b{color:var(--y);font-size:15px}
+
+/* SECTIONS */
+section{padding:44px 0 8px}
+.kicker{color:var(--y);font-weight:700;font-size:12px;letter-spacing:2.5px;margin-bottom:10px}
+h2{font-size:44px;margin-bottom:14px}
+p+p{margin-top:12px}
+.why{background:var(--k2);border-radius:16px;padding:22px;border-left:4px solid var(--y)}
+.timeline{display:flex;align-items:center;margin:18px 0 6px;gap:6px}
+.timeline .pt{text-align:center;font-size:12px;color:var(--g)}
+.timeline .pt b{display:block;font-family:'Bebas Neue';font-size:26px;color:var(--w);font-weight:400}
+.timeline .bar{flex:1;height:6px;border-radius:3px;background:var(--line);position:relative}
+.timeline .bar.fill{background:var(--y)}
+.timeline .snack b{color:var(--y)}
+
+/* CARDS */
+.card{background:var(--k2);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-top:22px}
+.card .head{padding:22px 22px 18px;display:flex;gap:16px;align-items:flex-start}
+.num{font-family:'Bebas Neue';font-size:64px;line-height:.85;color:var(--y);min-width:40px}
+.card h3{font-size:36px}
+.card .sub{color:var(--g);font-size:14px;margin-top:4px}
+.stats{display:flex;gap:8px;padding:0 22px 18px;flex-wrap:wrap}
+.stat{background:var(--k);border-radius:10px;padding:8px 12px;font-size:12px;color:var(--g)}
+.stat b{display:block;font-family:'Bebas Neue';font-size:28px;font-weight:400;color:var(--w);line-height:1}
+.stat.p b{color:var(--y)}
+.body{padding:0 22px 22px;display:grid;gap:18px}
+.lbl{font-size:12px;letter-spacing:2px;color:var(--g);font-weight:700;margin-bottom:8px}
+ul.ing{list-style:none;display:grid;gap:6px}
+ul.ing li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+ul.ing li .q{font-weight:700;color:var(--y);white-space:nowrap;transition:.2s}
+ul.ing li .q.flash{color:var(--k);background:var(--y);border-radius:4px;padding:0 4px}
+ol.steps{padding-left:20px;display:grid;gap:6px}
+ol.steps li::marker{color:var(--y);font-weight:700}
+.tip{background:var(--y);color:var(--k);border-radius:14px;padding:16px 18px}
+.tip .lbl{color:var(--k);opacity:.75}
+.tip p{font-weight:500}
+.var{font-size:14px;color:#DCDBD2}
+.var b{color:var(--y)}
+
+/* RULES */
+.rules{display:grid;gap:12px;margin-top:8px}
+.rule{display:flex;gap:14px;background:var(--k2);border-radius:14px;padding:16px 18px}
+.rule .i{font-size:26px;line-height:1}
+.rule h4{font-size:16px;margin-bottom:2px}
+.rule p{font-size:14px;color:#CFCEC5}
+
+/* BONUS TABLE */
+.bonus{background:linear-gradient(180deg,var(--k3),var(--k2));border:1px solid var(--y);border-radius:20px;padding:24px 20px;margin-top:8px}
+.bonus .badge{display:inline-block;background:var(--y);color:var(--k);font-family:'Bebas Neue';font-size:22px;padding:4px 12px;border-radius:6px;margin-bottom:12px}
+.tbl{width:100%;border-collapse:collapse;margin-top:18px;font-size:13px}
+.tblwrap{overflow-x:auto;margin:0 -4px}
+.tbl th,.tbl td{padding:9px 6px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap}
+.tbl th{font-weight:700;color:var(--g);font-size:12px}
+.tbl td:first-child,.tbl th:first-child{text-align:left;white-space:normal;min-width:110px}
+.tbl td:first-child{font-weight:700}
+.tbl .on{background:var(--y);color:var(--k)!important;font-weight:700}
+.tbl th.on{border-radius:8px 8px 0 0}
+.tbl tr:last-child td.on{border-radius:0 0 8px 8px}
+.tbl small{display:block;font-size:11px;opacity:.8;font-weight:400}
+.note{font-size:12px;color:var(--g);margin-top:14px}
+
+/* CTA */
+.cta{margin:48px 0 20px;background:var(--y);color:var(--k);border-radius:22px;padding:28px 24px;text-align:center}
+.cta h2{font-size:42px;margin-bottom:10px}
+.cta p{font-weight:500}
+.cta .kw{display:inline-block;margin-top:16px;background:var(--k);color:var(--y);font-family:'Bebas Neue';font-size:30px;padding:8px 22px;border-radius:10px;letter-spacing:1px}
+.cta .handle{display:block;margin-top:10px;font-weight:700}
+footer{color:var(--g);font-size:12px;text-align:center;padding:10px 0 40px}
+@media(max-width:520px){.picker .goal{margin-left:0;width:100%}.card h3{font-size:32px}h2{font-size:38px}}
+</style>
+</head>
+<body>
+
+<header class="wrap hero">
+  <div class="logo" id="logo">
+    <div class="mark">F</div>
+    <div class="name">FONSECA<small>ONLINE COACHING</small></div>
+  </div>
+  <span class="tag">GUIDE OFFERT</span>
+  <h1>LA COLLATION<br><span class="y">ANTI-CRAQUAGE</span></h1>
+  <p class="lead">4 collations protéinées qui changent ta fin de journée, avec la portion exacte selon ton poids. Fini le frigo ouvert à 19h30 😉</p>
+  <div class="meta">
+    <span class="chip">⏱ 2 à 5 min de prépa</span>
+    <span class="chip">💪 20 à 30 g de protéines</span>
+    <span class="chip">🛒 Produits de supermarché</span>
+  </div>
+</header>
+
+<div class="picker">
+  <div class="wrap row">
+    <label>Ton poids :</label>
+    <div class="seg" id="seg"></div>
+    <div class="goal">Objectif : <b id="goal">22 g</b> de protéines / collation</div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section>
+  <div class="kicker">AVANT DE COMMENCER</div>
+  <h2>POURQUOI <span class="y">16H30</span> CHANGE TOUT</h2>
+  <div class="why">
+    <p>Tu manges à midi, puis plus rien jusqu'au dîner. Ça fait 7 à 8 heures sans manger, avec le stress de la journée par-dessus. Quand tu rentres, ce n'est pas un manque de volonté : c'est de la faim. Et la faim gagne toujours.</p>
+    <div class="timeline">
+      <div class="pt"><b>12H</b>déjeuner</div>
+      <div class="bar fill"></div>
+      <div class="pt snack"><b>16H30</b>collation</div>
+      <div class="bar fill"></div>
+      <div class="pt"><b>20H</b>dîner</div>
+    </div>
+    <p>La collation coupe la journée en deux. Et si elle est <b class="y">riche en protéines</b>, elle te cale bien plus longtemps qu'un biscuit ou un fruit seul. C'est le nutriment qui rassasie le plus.</p>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">LES 4 COLLATIONS</div>
+  <h2>CHOISIS SELON <span class="y">TON MOMENT</span></h2>
+  <p style="color:#CFCEC5">Les quantités s'adaptent au poids que tu as sélectionné en haut de la page 👆</p>
+  <div id="cards"></div>
+</section>
+
+<section>
+  <div class="kicker">LES ASTUCES DE LA TEAM</div>
+  <h2>5 RÈGLES POUR QUE <span class="y">ÇA MARCHE</span></h2>
+  <div class="rules">
+    <div class="rule"><div class="i">⏰</div><div><h4>Mets une alarme à 16h30</h4><p>Pas d'alarme, pas de collation. En pleine journée, tu oublies. Une alarme et c'est réglé.</p></div></div>
+    <div class="rule"><div class="i">🥡</div><div><h4>Prépare la veille</h4><p>2 minutes le soir pour mettre ta collation dans une boîte. Le lendemain, tu n'as plus qu'à l'attraper.</p></div></div>
+    <div class="rule"><div class="i">🥒</div><div><h4>Protéines + volume</h4><p>Ajoute toujours un truc qui prend de la place : fruits rouges, concombre, crudités. Ton estomac se remplit, pour presque rien en calories.</p></div></div>
+    <div class="rule"><div class="i">🪑</div><div><h4>Mange-la assis(e), sans écran</h4><p>Une collation avalée debout devant l'ordi, ton cerveau ne l'enregistre pas. 5 minutes de pause, et elle te cale vraiment.</p></div></div>
+    <div class="rule"><div class="i">🎒</div><div><h4>Garde un plan B dans ton sac</h4><p>Une boisson protéinée ou un pot de skyr au frigo du bureau. Le jour où tout part en vrille, tu as quand même ta collation.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="bonus">
+    <span class="badge">BONUS N°5</span>
+    <h2>TES PORTIONS <span class="y">SELON TON POIDS</span></h2>
+    <p style="color:#DCDBD2">Une collation qui marche apporte entre <b class="y">20 et 30 g de protéines</b>. Plus tu es lourd(e), plus ton besoin est élevé. Voici les quantités pour chaque collation, colonne par colonne. La tienne est en jaune.</p>
+    <div class="tblwrap"><table class="tbl" id="tbl"></table></div>
+    <p class="note">Valeurs moyennes calculées à partir des tables nutritionnelles (Ciqual) et des étiquettes courantes. Elles peuvent varier légèrement selon les marques : un coup d'œil à l'étiquette, et tu ajustes de 10 à 20 g.</p>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>ET SI ON CONSTRUISAIT TOUT TON PLAN ?</h2>
+  <p>La collation, c'est une pièce du puzzle. Si tu veux que la team construise ton alimentation et ton entraînement de A à Z, écris-nous :</p>
+  <span class="kw">TRANSFO</span>
+  <span class="handle">en DM sur Instagram @marc__fonseca</span>
+</div>
+
+</main>
+<footer>© Fonseca Online Coaching · Ce guide ne remplace pas un avis médical.</footer>
+
+<script>
+const TIERS=["50-60","60-70","70-80","80-90","90+"];
+const GOAL=[20,22,25,28,30];
+const DATA=[
+ {name:"MOUSSE CHOCO-FRAMBOISE",sub:"Le moment sucré · 3 min · à la maison ou au bureau",
+  prot:[20,22,25,28,30],kcal:[155,165,180,195,210],
+  ing:[["Skyr nature",[180,200,225,250,275],"g"],["Cacao en poudre non sucré",[5,5,5,5,5],"g (1 c. à café)"],["Framboises surgelées",[50,50,50,50,50],"g"],["Sucrant ou quelques gouttes de vanille","au goût",""]],
+  steps:["Fouette le skyr avec le cacao et le sucrant pendant 1 minute.","Ajoute les framboises encore surgelées par-dessus.","Laisse reposer 2 minutes : elles dégèlent et font un coulis."],
+  tip:"Fouette vraiment fort, au fouet ou au batteur électrique. Le skyr prend de l'air et devient une mousse : même quantité, deux fois plus de volume dans le bol. Ton cerveau voit un vrai dessert.",
+  vari:"<b>Variante :</b> remplace le cacao par de la cannelle et les framboises par une pomme râpée, effet tarte aux pommes."},
+ {name:"TARTINE NORDIQUE",sub:"Le moment salé · 4 min · pour ceux qui n'aiment pas le sucré",
+  prot:[20,22,26,29,30],kcal:[220,235,265,290,325],
+  ing:[["Tranches de pain croustillant type Wasa",[2,2,2,2,3],""],["Cottage cheese",[80,100,100,120,120],"g"],["Saumon fumé",[40,40,55,60,60],"g"],["Concombre en rondelles, citron, aneth","à volonté",""]],
+  steps:["Étale le cottage cheese sur les tranches.","Ajoute le saumon fumé et les rondelles de concombre.","Un filet de citron, de l'aneth ou du poivre, c'est prêt."],
+  tip:"Le saumon coûte cher ? Remplace-le par du thon au naturel bien égoutté (même poids), ou par du blanc de poulet en tranches. Mêmes protéines, deux fois moins cher.",
+  vari:"<b>Variante :</b> cottage + œuf dur écrasé + moutarde à l'ancienne, version œuf mimosa."},
+ {name:"LE DUO À EMPORTER",sub:"Le moment nomade · 0 min le jour J · voiture, bureau, sac",
+  prot:[21,22,25,28,30],kcal:[230,245,280,310,335],
+  ing:[["Œufs durs",[2,2,3,3,3],""],["Edamame écossés (rayon surgelés)",[70,85,55,80,100],"g"],["Fleur de sel, piment d'Espelette","1 pincée",""]],
+  steps:["Le dimanche, fais cuire 6 œufs 10 min. Ils se gardent une semaine au frigo dans leur coquille.","La veille, sors une portion d'edamame du congélateur dans une boîte.","Le jour J, sel + piment sur les edamame, et c'est parti."],
+  tip:"Les edamame, ce sont des fèves de soja : riches en protéines ET en fibres, et on les mange une par une. Ça occupe les mains et ça remplace très bien le paquet de chips du goûter.",
+  vari:"<b>Variante :</b> remplace les edamame par des pois chiches rôtis au four avec paprika (un peu moins protéinés, encore plus croustillants)."},
+ {name:"PROTEIN LATTE GLACÉ",sub:"Le moment à boire · 2 min · ton café de l'après-midi, en mieux",
+  prot:[20,22,25,28,30],kcal:[120,140,150,155,175],
+  ing:[["Whey saveur vanille (1 dose ≈ 30 g)",[20,20,25,30,30],"g"],["Lait écrémé",[120,180,150,120,180],"ml"],["Café froid ou espresso refroidi","1 tasse",""],["Glaçons","une poignée",""]],
+  steps:["Mets la whey, le lait et le café dans un shaker.","Secoue 15 secondes, verse sur les glaçons.","Une pincée de cannelle sur le dessus si tu aimes."],
+  tip:"Tu le veux chaud ? Mélange d'abord la whey avec le lait froid, puis ajoute le café chaud. Sinon la whey fait des grumeaux. Et après 16h, passe au déca pour protéger ton sommeil 😴",
+  vari:"<b>Variante :</b> remplace le café par du cacao non sucré pour un chocolat protéiné, parfait l'hiver."}
+];
+let t=1;
+try{const s=localStorage.getItem("fonseca_tier");if(s!==null&&TIERS[+s])t=+s}catch(e){}
+
+const seg=document.getElementById("seg");
+TIERS.forEach((x,i)=>{const b=document.createElement("button");b.textContent=x+" kg";b.onclick=()=>set(i);seg.appendChild(b)});
+
+function q(v,u){if(Array.isArray(v))v=v[t];return typeof v==="number"?(v+(u?" "+u:"")):v}
+function renderCards(flash){
+  document.getElementById("cards").innerHTML=DATA.map((c,i)=>`
+  <article class="card">
+    <div class="head"><div class="num">${i+1}</div><div><h3>${c.name}</h3><div class="sub">${c.sub}</div></div></div>
+    <div class="stats">
+      <div class="stat p"><b>${c.prot[t]} g</b>protéines</div>
+      <div class="stat"><b>${c.kcal[t]}</b>kcal environ</div>
+    </div>
+    <div class="body">
+      <div><div class="lbl">INGRÉDIENTS · ${TIERS[t]} KG</div>
+        <ul class="ing">${c.ing.map(g=>`<li><span>${g[0]}</span><span class="q${flash&&Array.isArray(g[1])&&new Set(g[1]).size>1?' flash':''}">${q(g[1],g[2])}</span></li>`).join("")}</ul></div>
+      <div><div class="lbl">PRÉPARATION</div><ol class="steps">${c.steps.map(s=>`<li>${s}</li>`).join("")}</ol></div>
+      <div class="tip"><div class="lbl">L'ASTUCE DE LA TEAM</div><p>${c.tip}</p></div>
+      <div class="var">${c.vari}</div>
+    </div>
+  </article>`).join("");
+  if(flash)setTimeout(()=>document.querySelectorAll(".q.flash").forEach(e=>e.classList.remove("flash")),500);
+}
+function renderTable(){
+  const main=[[0,0],[1,1],[1,2],[2,0],[2,1],[3,0],[3,1]];
+  const lab=["Skyr (mousse)","Cottage (tartine)","Saumon (tartine)","Œufs durs (duo)","Edamame (duo)","Whey (latte)","Lait écrémé (latte)"];
+  let h=`<tr><th></th>${TIERS.map((x,i)=>`<th class="${i===t?'on':''}">${x}<small>kg</small></th>`).join("")}</tr>`;
+  h+=`<tr><td>Objectif protéines</td>${GOAL.map((g,i)=>`<td class="${i===t?'on':''}">${g} g</td>`).join("")}</tr>`;
+  main.forEach(([c,k],r)=>{const g=DATA[c].ing[k];
+    h+=`<tr><td>${lab[r]}</td>${g[1].map((v,i)=>`<td class="${i===t?'on':''}">${v}${g[2]==="g"?" g":g[2]==="ml"?" ml":""}</td>`).join("")}</tr>`});
+  document.getElementById("tbl").innerHTML=h;
+}
+function set(i,flash=true){
+  t=i;try{localStorage.setItem("fonseca_tier",i)}catch(e){}
+  [...seg.children].forEach((b,j)=>b.classList.toggle("on",j===i));
+  document.getElementById("goal").textContent=GOAL[i]+" g";
+  renderCards(flash);renderTable();
+}
+set(t,false);
+</script>
+</body>
+</html>
